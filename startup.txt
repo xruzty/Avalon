@@ -1,0 +1,43 @@
+import enum
+names = {}
+bad = []
+M = []
+class Names:    
+	r = 'Rusty'
+	a = 'Annie'
+	l = 'Likith'
+	j = 'Jaheen'
+	m = 'Momo'
+	i = 'Ishi'
+	x = 'x'
+	me = 'me'
+	pe = 'pe'
+	o = 'o'
+	mo = 'mo'
+r = Names.r
+a = Names.a
+l = Names.l
+j = Names.j
+m = Names.m
+i = Names.i
+x = Names.x
+me = Names.me
+pe = Names.pe
+o = Names.o
+mo = Names.mo
+def p(k,v):    
+    names[k] = v
+    if v=='x' or v=='mo':
+    	bad.append(k)
+    if v=='me' or v=='mo':
+        M.append(k)
+def g(k):
+    if names[k] == 'x' or names[k] == 'me' or names[k] == 'mo':
+        print("The bad guys are : ",end="")
+        print(bad)
+    elif names[k] == 'pe':
+        print("Merlin could be any of : ", end="")
+        print(M)
+    else:
+        print("Nothing to show!! :)")
+print('ready')    
